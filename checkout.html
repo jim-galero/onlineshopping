@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css e-commerce.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="online shopping.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="checkout" style="display: flex; justify-content: center; align-items: center;">
+  <div style="width: 400px;">
+    <h2>Checkout</h2>
+    <form>
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="address">Address:</label>
+        <input type="text" id="address" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="product">Product:</label>
+        <input type="text" id="product" value="" readonly>
+      </div>
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="price">Price:</label>
+        <input type="text" id="price" value="" readonly>
+      </div>
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label for="total">Total:</label>
+        <input type="text" id="total" value="" readonly>
+      </div>
+      <button onclick="placeOrder()">Place Order</button>
+    </form>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2023 Ukay Ukay Online. All rights reserved.</p>
+  </footer>
+
+  <script src="jsecom.js"></script>
+  <script>
+    // Retrieve the product details from session storage
+    var productName = sessionStorage.getItem('productName');
+    var productPrice = parseFloat(sessionStorage.getItem('productPrice'));
+
+    // Populate the fields on the checkout page if the product details exist
+    if (productName && productPrice) {
+      document.getElementById('product').value = productName;
+      document.getElementById('price').value = '$' + productPrice.toFixed(2);
+      document.getElementById('total').value = '$' + productPrice.toFixed(2);
+    }
+  </script>
+</body>
+</html>

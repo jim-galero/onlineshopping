@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+	.products {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 20px;
+	}
+
+	.product {
+		width: 300px;
+		padding: 20px;
+		margin: 20px;
+		background-color: #fff;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	}
+
+	.product img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+
+	.product h3 {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+
+	.product p {
+		margin-bottom: 10px;
+	}
+
+	.product button {
+		padding: 10px 20px;
+		background-color: #333;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="css e-commerce.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="hero">
+    <h1>Welcome to UKAY UKAY ONLINE</h1>
+    <p>Get your essentials for a more cheaper price!</p>
+    <a href="#" class="btn">Shop Now</a>
+  </section>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://content.asos-media.com/-/media/images/articles/men/2021/06/13-sun/pgeimagedisplay.jpg?h=1110&w=870&la=en-GB&hash=CDCDA30F1D6AC896BFAB04C829682570" alt="Product 1">
+      <h3>Oversized Graphic Tee</h3>
+	  <p>Introducing the ultimate style statement: our irresistible oversized graphic tees! Step up your fashion game and make heads turn with our trendy and unique designs.</p>
+      <p>$19.99</p>
+	  <button onClick="addToCart('Oversized Graphic Tee', 19.99)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://www.bhphotovideo.com/explora/sites/default/files/profile%20product.jpg" alt="Product 2">
+      <h3>ASUS Tuf Gaming F15</h3>
+      <p>$799.99</p>
+      <button onClick="addToCart('ASUS Tuf Gaming F15', 799.99)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://media.karousell.com/media/photos/products/2022/7/22/j1_low_travis_scott_reverse_mo_1658476840_c72a6c9a_progressive.jpg" alt="Product 3">
+      <h3>Reverse Mocha Travis Scott</h3>
+	  <p>This sneaker is crafted from a mix of suede and leather panels in neutral tones - Sail and Ridgerock - while some University red accents appear on the tongue label and embroidered logo on the heel.</p>
+      <p>$1199.99</p>
+      <button onClick="addToCart('Reverse Mocha Travis Scott', 1199.99)">Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Ukay Ukay Online. All rights reserved.</p>
+  </footer>
+  <script src="jsecom.js"></script>
+</body>
+</html>
